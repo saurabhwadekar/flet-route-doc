@@ -294,9 +294,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Basket
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Basket
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-basket" class="md-nav__link">
+    what is basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-variable-to-basket" class="md-nav__link">
+    Add variable to basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-variable-from-basket" class="md-nav__link">
+    Get variable from basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-variable-in-basket" class="md-nav__link">
+    Updating variable in basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-variable-from-basket" class="md-nav__link">
+    Delete variable from basket
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -367,6 +426,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-basket" class="md-nav__link">
+    what is basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-variable-to-basket" class="md-nav__link">
+    Add variable to basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-variable-from-basket" class="md-nav__link">
+    Get variable from basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-variable-in-basket" class="md-nav__link">
+    Updating variable in basket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-variable-from-basket" class="md-nav__link">
+    Delete variable from basket
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -384,6 +486,32 @@
 
 
 <h1 id="basket">Basket</h1>
+<h2 id="what-is-basket">what is basket</h2>
+<p><code>Basket</code> is one way. To share <code>data</code> or <code>objects</code> in multiple <code>views</code>. It is available as a <code>parameter</code> to every <code>view</code> and <code>middleware</code>. In this, you can perform operations like <code>get</code>, <code>add</code>, <code>update</code>, <code>delete</code> by the methods given below.</p>
+<h2 id="add-variable-to-basket">Add variable to basket</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">basket</span><span class="o">.</span><span class="n">my_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;saurabh&quot;</span><span class="p">,</span><span class="s2">&quot;mob&quot;</span><span class="p">:</span><span class="s2">&quot;1234567890&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;example@gamil.com&quot;</span><span class="p">}</span>
+</code></pre></div>
+<h2 id="get-variable-from-basket">Get variable from basket</h2>
+<p>variable access from basket
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">basket</span><span class="o">.</span><span class="n">my_data</span>
+</code></pre></div>
+Accessing a variable using the <code>get()</code> method.
+In get method we have to give the <code>name</code> of the variable in the form of <code>string</code>.
+If the variable exists then it will return the <code>value</code> otherwise it will return <code>None</code>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">basket</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;my_data&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="updating-variable-in-basket">Updating variable in basket</h2>
+<p>If a variable named <code>my_data</code> does not exist in <code>basket</code>, a new variable named <code>my_data</code> will be created.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">basket</span><span class="o">.</span><span class="n">my_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+</code></pre></div></p>
+<h2 id="delete-variable-from-basket">Delete variable from basket</h2>
+<p>deleting a variable using the <code>del</code> keyword
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">del</span> <span class="n">basket</span><span class="o">.</span><span class="n">my_data</span>
+</code></pre></div>
+deleting a variable using the <code>delete()</code> method.
+In the <code>delete()</code> method, you have to pass the <code>name</code> of the variable as a <code>string</code>. It will not give an error if a variable with this name does not exist in <code>basket</code>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">basket</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;my_data&quot;</span><span class="p">)</span>
+</code></pre></div></p>
 
 
 

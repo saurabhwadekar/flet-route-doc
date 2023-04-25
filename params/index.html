@@ -279,9 +279,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Params
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Params
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-params" class="md-nav__link">
+    what is params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-variable-to-params" class="md-nav__link">
+    Add variable to params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-variable-from-params" class="md-nav__link">
+    Get variable from params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-variable-in-params" class="md-nav__link">
+    Updating variable in params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-variable-from-params" class="md-nav__link">
+    Delete variable from params
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -367,6 +426,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-params" class="md-nav__link">
+    what is params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-variable-to-params" class="md-nav__link">
+    Add variable to params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-variable-from-params" class="md-nav__link">
+    Get variable from params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-variable-in-params" class="md-nav__link">
+    Updating variable in params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-variable-from-params" class="md-nav__link">
+    Delete variable from params
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -384,6 +486,35 @@
 
 
 <h1 id="params">Params</h1>
+<h2 id="what-is-params">what is params</h2>
+<p><code>params</code> we get as parameter in view.
+which is an object of <code>Params</code> class
+In which we get all the <code>values</code> ​​extracted from <code>url</code> in the form of <code>variables</code>. These variables can also be <code>get</code>,<code>add</code>, <code>delete</code>, <code>update</code> in the following ways.
+This would be useful in middlewares in general.</p>
+<h2 id="add-variable-to-params">Add variable to params</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">params</span><span class="o">.</span><span class="n">stu_id</span> <span class="o">=</span> <span class="mi">11</span>
+</code></pre></div>
+<h2 id="get-variable-from-params">Get variable from params</h2>
+<p>variable access from <code>params</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">params</span><span class="o">.</span><span class="n">stu_id</span>
+</code></pre></div>
+Accessing a variable using the <code>get()</code> method.
+In get method we have to give the <code>name</code> of the variable in the form of <code>string</code>.
+If the variable exists then it will return the <code>value</code> otherwise it will return <code>None</code>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;stu_id&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="updating-variable-in-params">Updating variable in params</h2>
+<p>If a variable named <code>stu_id</code> does not exist in <code>params</code>, a new variable named <code>stu_id</code> will be created.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">params</span><span class="o">.</span><span class="n">stu_id</span> <span class="o">=</span> <span class="mi">22</span>
+</code></pre></div></p>
+<h2 id="delete-variable-from-params">Delete variable from params</h2>
+<p>deleting a variable using the <code>del</code> keyword
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">del</span> <span class="n">params</span><span class="o">.</span><span class="n">stu_id</span>
+</code></pre></div>
+deleting a variable using the <code>delete()</code> method.
+In the <code>delete()</code> method, you have to pass the <code>name</code> of the variable as a <code>string</code>. It will not give an error if a variable with this name does not exist in <code>params</code>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">params</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;stu_id&quot;</span><span class="p">)</span>
+</code></pre></div></p>
 
 
 
